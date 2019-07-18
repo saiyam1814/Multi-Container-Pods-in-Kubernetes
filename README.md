@@ -12,12 +12,27 @@ Simple tutorial to demonstrate the concept of packaging multiple containers into
 
 Make sure that you have access to a Kubernetes cluster.
 
-```Biradars-MacBook-Air-4:~ sangam$ minikube start
+```
+Biradars-MacBook-Air-4:~ sangam$ minikube start
 😄  minikube v1.2.0 on darwin (amd64)
 🔥  Creating virtualbox VM (CPUs=2, Memory=2048MB, Disk=20000MB) ...
 🐳  Configuring environment for Kubernetes v1.15.0 on Docker 18.09.6
 🚜  Pulling images ...
 🚀  Launching Kubernetes ... 
+⌛  Verifying: apiserver proxy etcd scheduler controller dns
+🏄  Done! kubectl is now configured to use "minikube"
+Biradars-MacBook-Air-4:~ sangam$ git clone https://github.com/sangam14/Multi-Container-Pods-in-Kubernetes.git
+Cloning into 'Multi-Container-Pods-in-Kubernetes'...
+remote: Enumerating objects: 34, done.
+remote: Counting objects: 100% (34/34), done.
+remote: Compressing objects: 100% (29/29), done.
+remote: Total 34 (delta 8), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (34/34), done.
+Biradars-MacBook-Air-4:~ sangam$ cd Multi-Container-Pods-in-Kubernetes/
+Biradars-MacBook-Air-4:Multi-Container-Pods-in-Kubernetes sangam$ cd Build/
+Biradars-MacBook-Air-4:Build sangam$ ls
+Dockerfile		app.py			docker-compose.yml	readme.md		requirements.txt
+Biradars-MacBook-Air-4:Build sangam$ 
 ```
 
 
