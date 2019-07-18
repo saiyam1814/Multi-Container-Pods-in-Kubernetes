@@ -159,6 +159,19 @@ Biradars-MacBook-Air-4:Deploy sangam$
 kubectl get pods
 kubectl get svc
 ```
+```
+Biradars-MacBook-Air-4:Deploy sangam$ kubectl get pods
+NAME    READY   STATUS              RESTARTS   AGE
+mysql   0/1     ContainerCreating   0          65s
+web1    0/2     ContainerCreating   0          64s
+Biradars-MacBook-Air-4:Deploy sangam$ kubectl get svc
+NAME         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+kubernetes   ClusterIP   10.96.0.1        <none>        443/TCP        14m
+mysql        ClusterIP   10.104.154.233   <none>        3306/TCP       74s
+web          NodePort    10.98.123.39     <none>        80:31414/TCP   71s
+Biradars-MacBook-Air-4:Deploy sangam$ 
+```
+
 
 ## Get the IP address of one of the Nodes and the NodePort for the web Service. Populate the variables with the appropriate values
 ```
