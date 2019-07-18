@@ -182,6 +182,28 @@ kubectl get nodes
 export NODE_IP=<NODE_IP>
 export NODE_PORT=<NODE_PORT>
 ```
+```
+Biradars-MacBook-Air-4:Deploy sangam$ kubectl get nodes
+NAME       STATUS   ROLES    AGE   VERSION
+minikube   Ready    master   15m   v1.15.0
+Biradars-MacBook-Air-4:Deploy sangam$ kubectl describe svc web
+Name:                     web
+Namespace:                default
+Labels:                   app=demo
+                          name=web
+Annotations:              <none>
+Selector:                 name=web
+Type:                     NodePort
+IP:                       10.98.123.39
+Port:                     http  80/TCP
+TargetPort:               5000/TCP
+NodePort:                 http  31414/TCP
+Endpoints:                <none>
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+Biradars-MacBook-Air-4:Deploy sangam$ 
+```
 
 ## Initialize the database with sample schema
 ```
