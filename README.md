@@ -231,5 +231,9 @@ curl http://$NODE_IP:$NODE_PORT/users/1
 kubectl create -f web-rc.yml
 curl http://$NODE_IP:$NODE_PORT/users/1
 ```
-
+``
+Biradars-MacBook-Air-4:Deploy sangam$ kubectl create -f web-rc.yml
+replicationcontroller/web created
+Biradars-MacBook-Air-4:Deploy sangam$ 
+```
 
