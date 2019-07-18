@@ -12,6 +12,17 @@ Simple tutorial to demonstrate the concept of packaging multiple containers into
 
 Make sure that you have access to a Kubernetes cluster.
 
+```Biradars-MacBook-Air-4:~ sangam$ minikube start
+😄  minikube v1.2.0 on darwin (amd64)
+🔥  Creating virtualbox VM (CPUs=2, Memory=2048MB, Disk=20000MB) ...
+🐳  Configuring environment for Kubernetes v1.15.0 on Docker 18.09.6
+🚜  Pulling images ...
+🚀  Launching Kubernetes ... 
+```
+
+
+
+
 ## Build a Docker image from existing Python source code and push it to Docker Hub. Replace DOCKER_HUB_USER with your Docker Hub username.
 ```
 cd Build
