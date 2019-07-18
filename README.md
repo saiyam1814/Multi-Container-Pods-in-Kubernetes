@@ -33,6 +33,73 @@ Biradars-MacBook-Air-4:Multi-Container-Pods-in-Kubernetes sangam$ cd Build/
 Biradars-MacBook-Air-4:Build sangam$ ls
 Dockerfile		app.py			docker-compose.yml	readme.md		requirements.txt
 Biradars-MacBook-Air-4:Build sangam$ 
+
+Biradars-MacBook-Air-4:~ sangam$ git clone https://github.com/sangam14/Multi-Container-Pods-in-Kubernetes.git
+Cloning into 'Multi-Container-Pods-in-Kubernetes'...
+remote: Enumerating objects: 34, done.
+remote: Counting objects: 100% (34/34), done.
+remote: Compressing objects: 100% (29/29), done.
+remote: Total 34 (delta 8), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (34/34), done.
+Biradars-MacBook-Air-4:~ sangam$ cd Multi-Container-Pods-in-Kubernetes/
+Biradars-MacBook-Air-4:Multi-Container-Pods-in-Kubernetes sangam$ cd Build/
+Biradars-MacBook-Air-4:Build sangam$ ls
+Dockerfile		app.py			docker-compose.yml	readme.md		requirements.txt
+Biradars-MacBook-Air-4:Build sangam$ docker build  -t sangam14/py-red-sql .
+Sending build context to Docker daemon   7.68kB
+Error response from daemon: Bad response from Docker engine
+Biradars-MacBook-Air-4:Build sangam$ docker build  -t sangam14/py-red-sql .
+Sending build context to Docker daemon   7.68kB
+Step 1/3 : FROM python:2.7-onbuild
+2.7-onbuild: Pulling from library/python
+d660b1f15b9b: Pull complete 
+46dde23c37b3: Pull complete 
+6ebaeb074589: Pull complete 
+e7428f935583: Pull complete 
+0c3de61682aa: Pull complete 
+56f10ddf1173: Pull complete 
+4473537c621d: Pull complete 
+3106f7df3d1c: Pull complete 
+3de1c6ceef68: Pull complete 
+Digest: sha256:5af88e1d011bf7e845e83813712d9f91be1a39e2ede092008fc53e0a0ce1333b
+Status: Downloaded newer image for python:2.7-onbuild
+# Executing 3 build triggers
+ ---> Running in 096955170f27
+Collecting flask (from -r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/9b/93/628509b8d5dc749656a9641f4caf13540e2cdec85276964ff8f43bbb1d3b/Flask-1.1.1-py2.py3-none-any.whl (94kB)
+Collecting redis (from -r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/ac/a7/cff10cc5f1180834a3ed564d148fb4329c989cbb1f2e196fc9a10fa07072/redis-3.2.1-py2.py3-none-any.whl (65kB)
+Collecting mysql-python (from -r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/a5/e9/51b544da85a36a68debe7a7091f068d802fc515a3a202652828c73453cad/MySQL-python-1.2.5.zip (108kB)
+Collecting click>=5.1 (from flask->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/fa/37/45185cb5abbc30d7257104c434fe0b07e5a195a6847506c074527aa599ec/Click-7.0-py2.py3-none-any.whl (81kB)
+Collecting itsdangerous>=0.24 (from flask->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/76/ae/44b03b253d6fade317f32c24d100b3b35c2239807046a4c953c7b89fa49e/itsdangerous-1.1.0-py2.py3-none-any.whl
+Collecting Werkzeug>=0.15 (from flask->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/d1/ab/d3bed6b92042622d24decc7aadc8877badf18aeca1571045840ad4956d3f/Werkzeug-0.15.5-py2.py3-none-any.whl (328kB)
+Collecting Jinja2>=2.10.1 (from flask->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/1d/e7/fd8b501e7a6dfe492a433deb7b9d833d39ca74916fa8bc63dd1a4947a671/Jinja2-2.10.1-py2.py3-none-any.whl (124kB)
+Collecting MarkupSafe>=0.23 (from Jinja2>=2.10.1->flask->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/fb/40/f3adb7cf24a8012813c5edb20329eb22d5d8e2a0ecf73d21d6b85865da11/MarkupSafe-1.1.1-cp27-cp27mu-manylinux1_x86_64.whl
+Installing collected packages: click, itsdangerous, Werkzeug, MarkupSafe, Jinja2, flask, redis, mysql-python
+  Running setup.py install for mysql-python: started
+    Running setup.py install for mysql-python: finished with status 'done'
+Successfully installed Jinja2-2.10.1 MarkupSafe-1.1.1 Werkzeug-0.15.5 click-7.0 flask-1.1.1 itsdangerous-1.1.0 mysql-python-1.2.5 redis-3.2.1
+You are using pip version 10.0.1, however version 19.1.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Removing intermediate container 096955170f27
+ ---> 22384f3b59b2
+Step 2/3 : EXPOSE 5000
+ ---> Running in e64049f5c985
+Removing intermediate container e64049f5c985
+ ---> 1df738cafe71
+Step 3/3 : CMD [ "python", "app.py" ]
+ ---> Running in 23f63db2145c
+Removing intermediate container 23f63db2145c
+ ---> 67e9b2023fa7
+Successfully built 67e9b2023fa7
+Successfully tagged sangam14/py-red-sql:latest
+Biradars-MacBook-Air-4:Build sangam$ 
 ```
 
 
