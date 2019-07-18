@@ -20,7 +20,7 @@ spec:
                 name: redis
                 protocol: TCP
           - name: python
-            image: janakiramm/py-red
+            image: sangam14/py-red
             env:       
               - name: "REDIS_HOST"
                 value: "localhost"
