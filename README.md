@@ -110,6 +110,24 @@ Biradars-MacBook-Air-4:Build sangam$
 cd Build
 docker build . -t <DOCKER_HUB_USER>/py-red-sql
 docker push <DOCKER_HUB_USER>/py-red-sql
+
+Biradars-MacBook-Air-4:Build sangam$ docker push sangam14/py-red-sql
+The push refers to repository [docker.io/sangam14/py-red-sql]
+f40aa3d7f00d: Pushed 
+36dbcd55c7c6: Pushed 
+527c622cfaff: Pushed 
+3e397f5b8357: Mounted from library/python 
+e257add70b4b: Mounted from library/python 
+ce7e990ce056: Mounted from library/python 
+633d23790c1d: Mounted from library/python 
+d071a18d9802: Mounted from library/python 
+8451f9fe0016: Mounted from library/python 
+858cd8541f7e: Mounted from library/python 
+a42d312a03bb: Mounted from library/python 
+dd1eb1fd7e08: Mounted from library/python 
+latest: digest: sha256:6e875b18d5c53223c092d62fadf76e3237074813a1d36ea60c2cf55111bee944 size: 2844
+Biradars-MacBook-Air-4:Build sangam$ 
+
 ```
 
 ## Deploy the app to Kubernetes
