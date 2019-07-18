@@ -138,6 +138,21 @@ kubectl create -f db-svc.yml
 kubectl create -f web-pod-1.yml
 kubectl create -f web-svc.yml
 ```
+```
+Biradars-MacBook-Air-4:~ sangam$ cd Multi-Container-Pods-in-Kubernetes/
+Biradars-MacBook-Air-4:Multi-Container-Pods-in-Kubernetes sangam$ ls
+Build			Deploy			README.md		multi-container-pod.png
+Biradars-MacBook-Air-4:Multi-Container-Pods-in-Kubernetes sangam$ cd Deploy/
+Biradars-MacBook-Air-4:Deploy sangam$ kubectl create -f db-pod.yml
+pod/mysql created
+Biradars-MacBook-Air-4:Deploy sangam$ kubectl create -f db-svc.yml
+service/mysql created
+Biradars-MacBook-Air-4:Deploy sangam$ kubectl create -f web-pod-1.yml
+pod/web1 created
+Biradars-MacBook-Air-4:Deploy sangam$ kubectl create -f web-svc.yml
+service/web created
+Biradars-MacBook-Air-4:Deploy sangam$ 
+```
 
 ## Check that the Pods and Services are created
 ```
